@@ -17,22 +17,35 @@ class Link
         $this->path = $link['path'];
     }
 
-    public function name()
+    /**
+     * Return the folder name/slug; e.g. "symposium";
+     * this will be the same for every link on the same site
+     */
+    public function name(): string
     {
         return $this->site;
     }
 
-    public function url()
+    /**
+     * Fully-qualified URL; e.g. https://symposium.test/
+     */
+    public function url(): string
     {
         return $this->url;
     }
 
-    public function path()
+    /**
+     * Absolute path; e.g. /home/mattstauffer/Sites/symposium
+     */
+    public function path(): string
     {
         return $this->path;
     }
 
-    public function secured()
+    /**
+     * Whether the site is secured
+     */
+    public function secured(): bool
     {
         return $this->secured;
     }

@@ -3,12 +3,14 @@
 namespace App;
 
 use Illuminate\Support\Facades\File;
-use ValetDriver;
 
-class Site
+abstract class Site
 {
     protected $path;
     protected $links;
+    protected $abstract;
+
+    protected static $driver;
 
     public function __construct(string $path, $links)
     {
@@ -16,14 +18,14 @@ class Site
         $this->links = collect($links)->mapInto(Link::class);
     }
 
-    public function name()
+    static function driver()
     {
-        return $this->links->first()->name();
+        return static::$driver;
     }
 
-    public function driver()
+    public function name()
     {
-        return ValetDriver::assign($this->path, $this->name(), $this->links->first()->url());
+        return basename($this->path);
     }
 
     public function composerFile()
@@ -40,5 +42,10 @@ class Site
     public function minimumPhpVersion()
     {
         return data_get($this->composerFile(), 'require.php');
+    }
+
+    public function links()
+    {
+        return $this->links;
     }
 }
