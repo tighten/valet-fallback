@@ -1,7 +1,10 @@
 <li class="ml-6">
     <strong>{{ $site->name() }}</strong>
     @if ($site->minimumPhpVersion())
-    (PHP {{ $site->minimumPhpVersion() }})
+    :: PHP <code class="text-sm">{{ $site->minimumPhpVersion() }}</code>
+    @endif
+    @if ($site::driver() === 'LaravelValetDriver')
+    :: Laravel <code class="text-sm">{{ $site->laravelVersionConstraint() }}</code>
     @endif
     <ul class="list-disc">
     @foreach ($site->links() as $link)
@@ -19,7 +22,7 @@
         @case('LaravelValetDriver')
             Laravel:<br>
             <ul class="list-disc ml-6">
-                <li>Laravel Version: {{ $site->laravelVersionConstraint() }}</li>
+                <li>Laravel Version: <code class="text-sm">{{ $site->laravelVersionConstraint() }}</code></li>
                 <li>DB creds or link or something</li>
                 <li>Open with your fav editor</li>
             </ul>

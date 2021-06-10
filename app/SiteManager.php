@@ -26,7 +26,7 @@ class SiteManager
     {
         $siteDriver = $this->siteDriver($path, $links);
 
-        $siteType = Arr::get($this->driversToTypes, $siteDriver::class, BasicValetSite::class);
+        $siteType = Arr::get($this->driversToTypes, get_class($siteDriver), BasicValetSite::class);
 
         return new $siteType($path, $links);
     }
