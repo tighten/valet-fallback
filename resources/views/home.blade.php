@@ -7,7 +7,7 @@
 
     <title>My sites</title>
 
-    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 
