@@ -32,14 +32,14 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-2xl mt-6 font-semibold font-sans">Linked</h2>
             @foreach ($linked as $site)
-                <div class="bg-white mt-4 p-6 rounded-md border border-gray-200 shadow">
+                <div class="bg-white mt-4 py-6 rounded-md border border-gray-200 shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
                 </div>
             @endforeach
 
             <h2 class="text-2xl mt-10 font-semibold font-sans">Parked</h2>
             @foreach ($parked as $site)
-                <div class="bg-white mt-4 p-6 rounded-md border border-gray-200 shadow">
+                <div class="bg-white mt-4 py-6 rounded-md border border-gray-200 shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
                 </div>
             @endforeach
