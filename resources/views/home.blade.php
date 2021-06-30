@@ -14,8 +14,14 @@
 <body>
     <nav class="bg-gradient-to-b from-purple-500 to-purple-700 p-6">
         <div class="max-w-7xl mx-auto">
-            <div class="flex items-center flex-shrink-0 text-white mr-6">
-                <p class="font-semibold text-xl tracking-tight">Laravel
+            <div class="flex items-center flex-shrink-0 text-white">
+                <svg width="24" height="29" viewBox="0 0 24 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.43885 27.7524L23.8585 14.3527L6.43885 0.952956C3.80837 -1.07049 2.78884e-06 0.804756 2.49871e-06 4.12345L7.10175e-07 24.5819C4.20045e-07 27.9006 3.80837 29.7758 6.43885 27.7524Z" fill="white"/>
+                </svg>
+                <svg width="25" height="29" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18.2781 0.952959L0.858459 14.3527L18.2781 27.7524C20.9086 29.7758 24.7169 27.9006 24.7169 24.5819V4.12345C24.7169 0.804758 20.9085 -1.07048 18.2781 0.952959Z" fill="white"/>
+                </svg>
+                <p class="font-semibold text-xl tracking-tight ml-4">Laravel
                     <span class="font-extralight">Valet</span>
                 </p>
             </div>
