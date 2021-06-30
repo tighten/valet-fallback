@@ -7,11 +7,11 @@
 
     <title>My sites</title>
 
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
 </head>
 
-<body>
+<body class="font-sans">
     <nav class="bg-gradient-to-b from-purple-500 to-purple-700 p-6">
         <div class="max-w-7xl mx-auto">
             <div class="flex items-center flex-shrink-0 text-white">
@@ -36,14 +36,14 @@
     </nav>
     <div class="p-4 bg-gray-100">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-2xl mt-6 font-semibold font-sans">Linked</h2>
+            <h2 class="text-2xl mt-6 font-semibold">Linked</h2>
             @foreach ($linked as $site)
                 <div class="bg-white mt-4 py-6 rounded-md border border-gray-200 shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
                 </div>
             @endforeach
 
-            <h2 class="text-2xl mt-10 font-semibold font-sans">Parked</h2>
+            <h2 class="text-2xl mt-10 font-semibold">Parked</h2>
             @foreach ($parked as $site)
                 <div class="bg-white mt-4 py-6 rounded-md border border-gray-200 shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
