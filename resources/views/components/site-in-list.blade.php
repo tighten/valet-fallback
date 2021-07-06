@@ -1,5 +1,5 @@
-<h3 class="text-lg font-semibold px-6">{{ $site->name() }}
-    <span class="text-base font-normal">
+<h3 class="px-6 font-semibold text-lg">{{ $site->name() }}
+    <span class=" font-normal text-base">
         @if ($site->minimumPhpVersion())
             :: PHP <code class="text-sm">{{ $site->minimumPhpVersion() }}</code>
         @endif
@@ -9,10 +9,10 @@
     </span>
 </h3>
 <div>
-    <ul class="list-outside list-disc ml-8 px-6">
+    <ul class="ml-8 px-6 list-outside list-disc">
     @foreach ($site->links() as $link)
         <li class="text-sm text-purple-700">
-        <a href="{{ $link->url() }}" class="underline text-purple-700 font-semibold">{{ $link->name() }}</a>
+        <a href="{{ $link->url() }}" class="font-semibold text-purple-700 underline">{{ $link->name() }}</a>
         {{--
     @if (! $link->secured())
         <a href="{{ route('sites.secure', $link->name()) }}" class="text-blue-500 underline">Secure</a>
@@ -23,10 +23,10 @@
     </ul>
     @switch ($site::driver())
         @case('LaravelValetDriver')
-            <div class="border-t border-gray-200 my-6"></div>
+            <div class="my-6 border-gray-200 border-t"></div>
             <div class="px-6">
                 <span class="font-normal text-red-400">Laravel</span><br>
-                <ul class="list-disc ml-8 text-sm">
+                <ul class="ml-8 list-disc text-sm">
                     <li>Laravel Version: <code>{{ $site->laravelVersionConstraint() }}</code></li>
                     <li>DB creds or link or something</li>
                     <li>Open with your fav editor</li>

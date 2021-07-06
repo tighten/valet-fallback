@@ -12,7 +12,7 @@
 </head>
 
 <body class="font-sans">
-    <nav class="bg-gradient-to-b from-purple-500 to-purple-700 p-6">
+    <nav class="p-6 bg-gradient-to-b from-purple-500 to-purple-700">
         <div class="max-w-7xl mx-auto">
             <svg width="187" height="37" viewBox="0 0 187 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M67.0231 24.3256H73.8731V26.9172H63.797V11.2601H67.0231V24.3256Z" fill="white"/>
@@ -32,7 +32,7 @@
             </svg>
         </div>
     </nav>
-    <nav class="bg-white p-6 border-b border-gray-200 shadow">
+    <nav class="p-6 bg-white border-b border-gray-200 shadow">
         <div class="max-w-7xl mx-auto">
             <p class="text-3xl">Did you mean
                 <span class="font-semibold text-purple-700 underline">symposium</span>
@@ -41,16 +41,16 @@
     </nav>
     <div class="p-4 pb-48 bg-gray-200">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-2xl mt-4 font-semibold">Linked</h2>
+            <h2 class="mt-4 font-semibold text-2xl">Linked</h2>
             @foreach ($linked as $site)
-                <div class="bg-white mt-4 mb-6 py-6 rounded-md border border-gray-200 shadow">
+                <div class="mt-4 mb-6 py-6 bg-white border border-gray-200 rounded-md shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
                 </div>
             @endforeach
 
-            <h2 class="text-2xl mt-10 font-semibold">Parked</h2>
+            <h2 class="mt-10 font-semibold text-2xl">Parked</h2>
             @foreach ($parked as $site)
-                <div class="bg-white mt-4 mb-6 py-6 rounded-md border border-gray-200 shadow">
+                <div class="mt-4 mb-6 py-6 bg-white border border-gray-200 rounded-md shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
                 </div>
             @endforeach
