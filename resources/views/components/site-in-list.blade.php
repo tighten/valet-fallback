@@ -9,9 +9,9 @@
     </span>
 </h3>
 <div>
-    <ul class="list-disc ml-8 px-6">
+    <ul class="list-outside list-disc ml-8 px-6">
     @foreach ($site->links() as $link)
-        <li>
+        <li class="text-sm text-purple-700">
         <a href="{{ $link->url() }}" class="underline text-purple-700 font-semibold">{{ $link->name() }}</a>
         {{--
     @if (! $link->secured())
@@ -26,8 +26,8 @@
             <div class="border-t border-gray-200 my-6"></div>
             <div class="px-6">
                 <span class="font-normal text-red-400">Laravel</span><br>
-                <ul class="list-disc ml-8">
-                    <li>Laravel Version: <code class="text-sm">{{ $site->laravelVersionConstraint() }}</code></li>
+                <ul class="list-disc ml-8 text-sm">
+                    <li>Laravel Version: <code>{{ $site->laravelVersionConstraint() }}</code></li>
                     <li>DB creds or link or something</li>
                     <li>Open with your fav editor</li>
                 </ul>

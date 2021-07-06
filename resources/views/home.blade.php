@@ -39,18 +39,18 @@
             </p>
         </div>
     </nav>
-    <div class="p-4 bg-gray-200">
+    <div class="p-4 pb-48 bg-gray-200">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-2xl mt-6 font-semibold">Linked</h2>
+            <h2 class="text-2xl mt-4 font-semibold">Linked</h2>
             @foreach ($linked as $site)
-                <div class="bg-white mt-4 py-6 rounded-md border border-gray-200 shadow">
+                <div class="bg-white mt-4 mb-6 py-6 rounded-md border border-gray-200 shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
                 </div>
             @endforeach
 
             <h2 class="text-2xl mt-10 font-semibold">Parked</h2>
             @foreach ($parked as $site)
-                <div class="bg-white mt-4 py-6 rounded-md border border-gray-200 shadow">
+                <div class="bg-white mt-4 mb-6 py-6 rounded-md border border-gray-200 shadow">
                     <x-site-in-list :site="$site"></x-site-in-list>
                 </div>
             @endforeach
