@@ -11,8 +11,8 @@
 <div>
     <ul class="ml-8 px-6 list-outside list-disc">
     @foreach ($site->links() as $link)
-        <li class="text-purple-700">
-        <a href="{{ $link->url() }}" class="font-semibold text-purple-700 underline">{{ $link->name() }}</a>
+        <li class="text-purple-800">
+        <a href="{{ $link->url() }}" class="font-semibold text-purple-800 underline">{{ $link->name() }}</a>
         {{--
     @if (! $link->secured())
         <a href="{{ route('sites.secure', $link->name()) }}" class="text-blue-500 underline">Secure</a>
