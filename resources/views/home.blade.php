@@ -35,7 +35,7 @@
     <nav class="p-6 bg-white border-b border-gray-200 shadow">
         <div class="max-w-7xl mx-auto">
             <p class="text-3xl">Did you mean
-                <span class="font-semibold text-purple-700 underline">symposium</span>
+                <span class="font-semibold text-purple-800 underline">symposium</span>
             </p>
         </div>
     </nav>
