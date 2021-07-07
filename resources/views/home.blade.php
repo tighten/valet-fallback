@@ -12,7 +12,7 @@
 </head>
 
 <body class="font-sans">
-    <nav class="p-6 border border-blue-300 bg-gradient-to-b from-purple-500 to-purple-700">
+    <nav class="p-4 border border-blue-300 bg-gradient-to-b from-purple-500 to-purple-700">
         <div class="max-w-7xl mx-auto">
             <svg width="187" height="37" viewBox="0 0 187 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M67.0231 24.3256H73.8731V26.9172H63.797V11.2601H67.0231V24.3256Z" fill="white"/>
@@ -32,7 +32,7 @@
             </svg>
         </div>
     </nav>
-    <nav class="p-6 bg-white border-b border-gray-300 shadow">
+    <nav class="p-8 bg-white border-b border-gray-300 shadow">
         <div class="max-w-7xl mx-auto">
             <p class="text-3xl">Did you mean
                 <span class="font-semibold text-purple-800 underline">symposium</span>
