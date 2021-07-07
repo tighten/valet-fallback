@@ -11,7 +11,7 @@
 <div>
     <ul class="ml-8 px-6 list-outside list-disc">
     @foreach ($site->links() as $link)
-        <li class="text-sm text-purple-700">
+        <li class="text-purple-700">
         <a href="{{ $link->url() }}" class="font-semibold text-purple-700 underline">{{ $link->name() }}</a>
         {{--
     @if (! $link->secured())
@@ -25,7 +25,7 @@
         @case('LaravelValetDriver')
             <div class="my-6 border-gray-200 border-t"></div>
             <div class="px-6">
-                <span class="font-normal text-red-400">Laravel</span><br>
+                <span class="font-normal font-semibold text-red-400">Laravel</span><br>
                 <ul class="ml-8 list-disc text-sm">
                     <li>Laravel Version: <code>{{ $site->laravelVersionConstraint() }}</code></li>
                     <li>DB creds or link or something</li>
