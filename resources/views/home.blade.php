@@ -32,10 +32,11 @@
             </svg>
         </div>
     </nav>
-    <nav class="p-8 bg-white border-b border-gray-300 shadow">
+    <nav class="px-4 py-8 bg-white border-b border-gray-300 shadow">
         <div class="max-w-7xl mx-auto">
             <p class="text-3xl">Did you mean
-                <span class="font-semibold text-purple-800 underline">symposium</span>
+                <span class="font-semibold text-purple-800 underline">symposium</span><!--
+                --><span class="text-3xl">?</span>
             </p>
         </div>
     </nav>
