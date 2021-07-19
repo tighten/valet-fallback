@@ -1,4 +1,4 @@
-<h3 class="px-6 font-semibold text-lg">{{ strtolower($site->name()) }}
+<h3 class="px-5 font-semibold text-lg">{{ strtolower($site->name()) }}
     <span class="font-normal text-base">
         @if ($site->minimumPhpVersion())
             :: PHP <code class="text-sm">{{ $site->minimumPhpVersion() }}</code>
@@ -9,7 +9,7 @@
     </span>
 </h3>
 <div>
-    <ul class="ml-8 px-6 list-outside list-disc">
+    <ul class="ml-8 px-5 list-outside list-disc">
     @foreach ($site->links() as $link)
         <li class="text-purple-800">
         <a href="{{ $link->url() }}" class="font-semibold text-purple-800 underline">{{ $link->name() }}</a>
@@ -24,7 +24,7 @@
     @switch ($site::driver())
         @case('LaravelValetDriver')
             <div class="my-6 border-gray-200 border-t"></div>
-            <div class="px-6">
+            <div class="px-5">
                 <span class="font-normal font-semibold text-red-400">Laravel</span><br>
                 <ul class="ml-8 list-disc text-sm">
                     <li>Laravel Version: <code>{{ $site->laravelVersionConstraint() }}</code></li>
