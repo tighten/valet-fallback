@@ -1,15 +1,18 @@
-<li class="ml-6">
-    <strong>{{ $site->name() }}</strong>
-    @if ($site->minimumPhpVersion())
-    :: PHP <code class="text-sm">{{ $site->minimumPhpVersion() }}</code>
-    @endif
-    @if ($site::driver() === 'LaravelValetDriver')
-    :: Laravel <code class="text-sm">{{ $site->laravelVersionConstraint() }}</code>
-    @endif
-    <ul class="list-disc">
+<h3 class="px-5 font-semibold text-lg">{{ strtolower($site->name()) }}
+    <span class="font-normal text-base">
+        @if ($site->minimumPhpVersion())
+            :: PHP <code class="text-sm">{{ $site->minimumPhpVersion() }}</code>
+        @endif
+        @if ($site::driver() === 'LaravelValetDriver')
+            :: Laravel <code class="text-sm">{{ $site->laravelVersionConstraint() }}</code>
+        @endif
+    </span>
+</h3>
+<div>
+    <ul class="ml-8 px-5 list-outside list-disc">
     @foreach ($site->links() as $link)
-        <li class="ml-6">
-        <a href="{{ $link->url() }}" class="underline text-blue-500">{{ $link->name() }}</a>
+        <li class="text-purple-800">
+        <a href="{{ $link->url() }}" class="font-semibold text-purple-800 underline">{{ $link->name() }}</a>
         {{--
     @if (! $link->secured())
         <a href="{{ route('sites.secure', $link->name()) }}" class="text-blue-500 underline">Secure</a>
@@ -20,12 +23,15 @@
     </ul>
     @switch ($site::driver())
         @case('LaravelValetDriver')
-            Laravel:<br>
-            <ul class="list-disc ml-6">
-                <li>Laravel Version: <code class="text-sm">{{ $site->laravelVersionConstraint() }}</code></li>
-                <li>DB creds or link or something</li>
-                <li>Open with your fav editor</li>
-            </ul>
+            <div class="my-6 border-gray-200 border-t"></div>
+            <div class="px-5">
+                <span class="font-normal font-semibold text-red-400">Laravel</span><br>
+                <ul class="ml-8 list-disc text-sm">
+                    <li>Laravel Version: <code>{{ $site->laravelVersionConstraint() }}</code></li>
+                    <li>DB creds or link or something</li>
+                    <li>Open with your fav editor</li>
+                </ul>
+            </div>
         @break
     @endswitch
-</li>
+</div>
