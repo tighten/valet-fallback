@@ -1,4 +1,4 @@
-<h3 class="px-6 font-semibold text-lg">{{ $site->name() }}
+<h3 class="px-6 font-semibold text-lg">{{ strtolower($site->name()) }}
     <span class="font-normal text-base">
         @if ($site->minimumPhpVersion())
             :: PHP <code class="text-sm">{{ $site->minimumPhpVersion() }}</code>
