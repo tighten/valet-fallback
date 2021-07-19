@@ -12,7 +12,7 @@
 </head>
 
 <body class="font-sans">
-    <nav class="p-4 border border-blue-300 bg-gradient-to-b from-purple-500 to-purple-700">
+    <nav class="p-4 bg-gradient-to-b from-purple-500 to-purple-700">
         <div class="max-w-7xl mx-auto">
             <svg width="187" height="37" viewBox="0 0 187 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M67.0231 24.3256H73.8731V26.9172H63.797V11.2601H67.0231V24.3256Z" fill="white"/>
