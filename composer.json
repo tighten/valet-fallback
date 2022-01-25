@@ -14,7 +14,7 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.81",
         "laravel/tinker": "^2.5",
-        "laravel/valet": "^2.14"
+        "laravel/valet": "^2.18"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
