@@ -16,7 +16,7 @@ Route::get('/', function () {
     });
 
     $parked = $site->parked()->filter(function ($site) {
-        return in_array($site['site'], ['audiovisual', 'symposium', 'ram', 'postit', 'novapackages', 'karani']);
+        return in_array($site['site'], ['audiovisual', 'symposium', 'ram', 'postit', 'novapackages']);
     })->groupBy(function ($site) {
         return $site['path'];
     })->map(function ($links) use ($siteManager) {
