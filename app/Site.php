@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\File;
 abstract class Site
 {
     protected $path;
+
     protected $links;
+
     protected $abstract;
 
     protected static $driver;
@@ -18,7 +20,7 @@ abstract class Site
         $this->links = collect($links)->mapInto(Link::class);
     }
 
-    static function driver()
+    public static function driver()
     {
         return static::$driver;
     }
@@ -30,7 +32,7 @@ abstract class Site
 
     public function composerFile()
     {
-        $composerPath = $this->path . '/composer.json';
+        $composerPath = $this->path.'/composer.json';
 
         if (! File::exists($composerPath)) {
             return null;

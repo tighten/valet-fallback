@@ -5,8 +5,11 @@ namespace App;
 class Link
 {
     protected $site;
+
     protected $secured;
+
     protected $url;
+
     protected $path;
 
     public function __construct(array $link)
