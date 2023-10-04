@@ -1,6 +1,5 @@
 <?php
 
-use App\Site;
 use App\SiteManager;
 use Illuminate\Support\Facades\Route;
 use Valet\Site as ValetSite;
@@ -30,7 +29,7 @@ Route::get('/', function () {
 });
 Route::get('{site}/secure', function ($site) {
     $tld = Configuration::read()['tld'];
-    $url = $site . '.' . $tld;
+    $url = $site.'.'.$tld;
     $site = app(ValetSite::class);
     $site->secure($url);
 })->name('sites.secure');
